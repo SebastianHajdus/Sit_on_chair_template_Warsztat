@@ -1,80 +1,19 @@
-'use strict';
+var gulp = require('gulp'); //pobierz modul gulp
+var sass = require('gulp-sass'); //zainstaulj modul gulp sass
+var sourcemaps = require('gulp-sourcemaps'); // zmienna require i nazwa jaka chcemy przypisac zmiennej
 
-var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var browserSync = require('browser-sync').create();
-
-// Jesli nie wykonuje sie komenda gulp autprefixer wykorzystac ponizszy kod oraz zainstalowac
-// plugin 
-// npm install es6-promise
-
-require('es6-promise').polyfill();
-
-var postcss      = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-
-// Gulp jshint 
-gulp.task('jshint',function(){
-	  return gulp.src('js/**/*.js') // Miejsce docelowe
-	  .pipe(jshint()) // Plugin 
-	  .pipe(jshint.reporter('default'))
-});
- 
-// Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
-
-    browserSync.init({ 
-        server: ".",
-        tunnel: "coderslab2",
-    });
-
-    gulp.watch("sass/**/*.scss", ['sass']);
-    // gulp.watch("js/**/*.js", ['jshint']);
-    // gulp.watch("css/*.css",['autoprefixer']);
-    // gulp.watch("*.html").on('change', browserSync.reload);
-});
-
-// Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
-    return gulp.src("sass/**/*.scss")
-    	.pipe(sourcemaps.init())
-        // .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+gulp.task('scss', function(){ //funkcjonalnosc gulpa; gulp task
+    return gulp.src("sass/main.scss") //pobierz sciezke, zlap plik main scss
+        .pipe(sourcemaps.init()) //funkcja gulpa, daje mozliwosc wywolania modulu
         .pipe(sass({
-         errLogToConsole: true,
-         outputStyle: 'compressed', 
-         // sourceComments: true, 
-        }).on('error', sass.logError))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest("css/"))
-        .pipe(browserSync.stream({match: '**/*.css'}));
+         errLogToConsole: true, //kazdy blad wyswietl na konsoli
+         outputStyle: 'expanded',//okresla jaki wynikowy css, czy ulozony w jednej lini(kompress), czy czytelni
+         // sourceComments: true, //skompresowany bedzie sie szybciej wczytywal
+       }).on('error', sass.logError))//wysiwetlanie na konsoli
+        .pipe(sourcemaps.write())//utworz sourcmape,czyli to co sie wyswietla zakomitowane pod plikiem main.css
+        .pipe(gulp.dest("css"))
+})
+
+gulp.task('default', ['scss'], function() { //nasluchiowanie plikow
+    gulp.watch('sass/**/*.scss', ['scss']) //kazdy folder zagniezdzony ma brac pod uwage
 });
-
-gulp.task('autoprefixer', function () {
-
-    return gulp.src('css/*.css')
-        .pipe(sourcemaps.init())
-        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('css/'));
-});
-
-
-// Jak nie idzie zainstalowac https://github.com/stefanpenner/es6-promise
-gulp.task('default', ['serve']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
