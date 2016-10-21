@@ -1,25 +1,50 @@
 .nav {
+    background: black;
+
 
 }
 
 .foo {
+    background: white;
+
+}
+
+body {
 
 }
 
 header {
-  
+    background: linear-gradient(#f8f8f8 60%, #d8d7dd);
+
+}
+
+span {
+    color: green;
+
+}
+
+li {
+    word-spacing: 2px; //rozdziela tylko o !?
+    margin: 10px;
+
+}
+
+.header {
+    height: 20em;
 }
 
 .section_1 {
+    height: 17em;
 
 }
 
 .section_2 {
-
+    background: #DBDAE0;
+    height: 22em;
 }
 
 .section_3 {
-
+    height: 18em;
 }
 
 .section_2T {
@@ -28,4 +53,40 @@ header {
 
 .section_3T {
 
+}
+
+.box1 {
+    background-image: url("../images/box1_img.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.box2 {
+    background-image: url("../images/box2_img.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#logo1 {
+    color:white;
+    display: flex;
+    float: left;
+    margin: 10px;
+
+}
+
+#menu {
+    color:white;
+    display: flex;
+    float:right;
+
+}
+
+.chair_H {
+    background-image: url("../images/black_chair.png");
+}
+
+#tekst_H {
+  
 }
