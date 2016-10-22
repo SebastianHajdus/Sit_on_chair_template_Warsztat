@@ -1,3 +1,29 @@
 .flex {
     display: flex;
+    flex-direction: column;
+
+}
+
+.header {
+    h1 {
+      height:33%;
+      text-align: center;
+      margin-top: 7%;
+    }
+    p {
+      height:33%;
+      text-align: center;
+      margin:0 10%; //margines (gora/dol) (lewy/prawy)
+      word-spacing: 4%;
+      line-height: 150%; //odstepy miedzy liniami tekstu
+    }
+    a {
+      height:33%;
+      text-align: center;
+      align-items: center; //  -- ? -- nie działa
+    }
+}
+
+.section_1 {
+
 }

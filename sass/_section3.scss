@@ -1,0 +1,50 @@
+.section_3 {
+    height: 18em;
+}
+
+.section_3T {
+    .green_div {
+    width: 33%;
+    }
+}
+
+
+
+.chair_S3 {
+    background-image: url("../images/red_chair.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+}
+
+input[type="checkbox"] {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  margin-bottom: 25px;
+  background-image: url("../images/form_ok.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+fieldset {
+  float: left;
+  border: none;
+  padding: 10px;
+}
+
+#form-fields {
+  width: 58%;
+  margin-right: 3%;
+  padding: 25px 0;
+}
+
+#form-fields input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 2em;
+  color: #bdbdbd;
+  padding: 5px;
+  border: 1px solid #bdbdbd;
+}

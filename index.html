@@ -26,14 +26,13 @@
                     <div class="row">
                         <div class="col-6-12 header chair_H">
                         </div>
-                        <div class="col-6-12 header">
+                        <div class="col-6-12 header flex">
                             <h1>SIT <span>ON</span> OUR <span>CHAIR</span></h1>
-                            <p id="tekst_H">
+                            <p>
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             </p>
-                            <a href="#">ZOBACZ WIĘCEJ</a>
+                            <a id="button_H" href="#">ZOBACZ WIĘCEJ</a>
                         </div>
                     </div>
                 </div>
@@ -44,46 +43,87 @@
             <div class="row">
                 <div class="col-12-12">
                     <div class="row">
-                        <div class="col-4-12 section_1 box1">
+                        <div class="col-4-12 section_1 box1 flex">
+                            <h1 id="clair">Chair CLAIR</h1>
+                            <div class="green_div"></div>
                         </div>
-                        <div class="col-4-12 section_1 box2">
+                        <div class="col-4-12 section_1 box2 flex">
+                            <h1 id="margarita">Chair MARGARITA</h1>
+                            <div class="green_div"></div>
                         </div>
-                        <div class="col-4-12 section_1">
-                            <p class="tekst_S">
-                                  Finds all inputs
-                            </p>
+                        <div class="col-4-12 section_1 box3 flex">
+                            <h1 id="find">Finds all inputs</h1>
+                            <div class="green_div"></div>
                             <p>
                                 This establishes the main-axis, thus defining the direction flex items are placed in the flex container.
                                 Flexbox is (aside from optional wrapping) a single-direction layout concept.
-                                Think of flex items as primarily laying out either in horizontal rows or vertical columns.
+                            </p>
+                            <p>
+                              Think of flex items as primarily laying out either in horizontal rows or vertical columns.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12-12">
+                <div class="col-12-12 background">
                     <div class="row">
                         <div class="col-12-12 section_2T">
                             <h1>CENNIK<h1>
+                            <div class="green_div">aaa</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-4-12 section_2 BP">
+                        <div class="col-4-12 section_2">
+                          <div class="BP">
                             <div class="circle_S">
+                              <div class="circle_S_In">
+                              </div>
                             </div>
                             <h1>BASIC PLAN</h1>
                             <div class="circle_M">
-                                <p>85.99</p>
+                                <p>85<sup>99</sup></p>
                                 <p>PLN/MSC</p>
                             </div>
-                            <p>Zakup towaru + dowoz</p>
-                            <p>Serwis</p>
+                            <p id="zakup">Zakup towaru + dowoz</p>
+                            <p id="serwis">Serwis</p>
                             <a href="#">DOLACZ</a>
+                          </div>
                         </div>
-                        <div class="col-4-12 section_2 SP">
+                        <div class="col-4-12 section_2">
+                          <div class="SP">
+                            <div class="circle_S">
+                              <div class="circle_S_In">
+                              </div>
+                            </div>
+                            <h1>STANDARDOWY PLAN</h1>
+                            <div class="circle_M">
+                                <p>95<sup>99</sup></p>
+                                <p>PLN/MSC</p>
+                            </div>
+                            <p id="zakup">Zakup towaru + dowoz</p>
+                            <p id="serwis">Serwis</p>
+                            <p id="gwarancja">Gwarancja 5 lat</p>
+                            <a href="#">DOLACZ</a>
+                          </div>
                         </div>
-                        <div class="col-4-12 section_2 AP">
+                        <div class="col-4-12 section_2">
+                          <div class="AP">
+                            <div class="circle_S">
+                              <div class="circle_S_In">
+                              </div>
+                            </div>
+                            <h1>ADVANCE PLAN</h1>
+                            <div class="circle_M">
+                                <p>211<sup>00</sup></p>
+                                <p>PLN/MSC</p>
+                            </div>
+                            <p id="zakup">Zakup towaru + dowoz</p>
+                            <p id="serwis">Serwis</p>
+                            <p id="gwarancja">Gwarancja 6 lat</p>
+                            <p id="projektant">Porady projektanta</p>
+                            <a href="#">DOLACZ</a>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -93,10 +133,11 @@
                     <div class="row">
                         <div class="col-12-12 section_3T">
                             <h1>KONTAKT</h1>
+                            <div class="green_div">aaa</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6-12 section_3">
+                        <div class="col-9-12 section_3">
                               <form>
                                 <fieldset id="form-fields">
                                   <input type="text" id="name" placeholder="Imię">
@@ -105,7 +146,7 @@
                                 </fieldset>
                               </form>
                         </div>
-                        <div class="col-6-12 section_3">
+                        <div class="col-3-12 section_3">
                             <div class="chair_S3">
 
                             </div>
@@ -126,7 +167,16 @@
 
         <footer>
             <div class="row">
-                <div class="col-12-12 foo">
+                <div class="col-12-12">
+                  <div class="foo">
+                    <p id="copy">Copyright 2014 | All Rights Reserved - Sit On Chair</p>
+                    <div id="links">
+                      <a href="#"><img src="images/flickr.png" alt="Flickr logo"></a>
+                      <a href="#"><img src="images/vimeo.png" alt="Vimeo logo"></a>
+                      <a href="#"><img src="images/pinterest.png" alt="Pinterest logo"></a>
+                      <a href="#"><img src="images/twitter.png" alt="Twitter logo"></a>
+                      <p>SIT <span>ON</span> CHAIR</p>
+                    </div>
                 </div>
             </div>
         </footer>

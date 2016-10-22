@@ -1,7 +1,14 @@
 @import 'reset';
+@import 'base';
 @import 'container';
 @import 'grid';
-@import 'base';
+@import 'flex';
 
+
+
+@import 'header';
+@import 'section1';
 @import 'section2';
 @import 'section3';
+
+@import 'buttons';

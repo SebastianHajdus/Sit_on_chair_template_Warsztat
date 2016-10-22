@@ -1,0 +1,72 @@
+.box1 {
+    background-image: url("../images/box1_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.box2 {
+    background-image: url("../images/box2_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section_1 {
+    height: 17em;
+}
+
+.green_div {
+    display: flex;
+    background: green;
+
+}
+
+
+#clair {
+    display: flex;
+    text-align: left;
+    align-items: flex-end;
+    height: 10%;
+    background-color: yellow;
+    margin-top: 50%;
+    padding: 8%;
+
+}
+
+#margarita {
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
+    height: 10%;
+    background-color: yellow;
+    margin-top: 50%;
+    padding: 8%;
+
+
+
+}
+
+#find {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    height: 15%;
+    background-color: yellow;
+    margin-top: 2%;
+    padding: 5%;
+
+
+}
+
+
+
+
+.box3 {
+    p {
+      color: red;
+      margin-top: 4%;
+    }
+    h1 {
+      color: blue;
+    }
+}
