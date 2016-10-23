@@ -48,3 +48,31 @@ for(var i = 0; i<images.length; i++) {
     text.style.display= 'block';
   })
 }
+
+
+// --- slider ---
+
+var btnPrev = document.querySelector('#left p');
+var btnNext = document.querySelector('#right p');
+var slider = document.querySelectorAll('li');
+var counter = 0;
+
+slider[counter].classList.add('visible');
+
+btnPrev.addEventListener('click', function () {
+  slider[counter].classList.remove('visible');
+  counter++;
+  if(counter >= slider.length) {
+    counter = 0;
+  }
+  slider[counter].classList.add('visible');
+})
+
+btnNext.addEventListener('click', function () {
+  slider[counter].classList.remove('visible');
+  counter--;
+  if(counter < 0) {
+    counter = slider.length-1;
+  }
+  slider[counter].classList.add('visible');
+})

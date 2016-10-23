@@ -27,7 +27,7 @@
     text-align: left;
     align-items: flex-end;
     height: 10%;
-    background-color: yellow;
+    background-color: lightgreen;
     margin-top: 50%;
     padding: 8%;
 
@@ -38,7 +38,7 @@
     align-items: flex-end;
     text-align: left;
     height: 10%;
-    background-color: yellow;
+    background-color: lightgreen;
     margin-top: 50%;
     padding: 8%;
 
@@ -51,7 +51,7 @@
     align-items: flex-start;
     text-align: left;
     height: 15%;
-    background-color: yellow;
+    background-color: lightgreen;
     margin-top: 2%;
     padding: 5%;
 
@@ -59,14 +59,17 @@
 }
 
 
-
-
 .box3 {
     p {
       color: red;
       margin-top: 4%;
     }
-    h1 {
-      color: blue;
-    }
+
+}
+
+// ----------------- selektory
+
+a[href$=".png"] {
+  color: blue;
+  font-weight: bold;
 }

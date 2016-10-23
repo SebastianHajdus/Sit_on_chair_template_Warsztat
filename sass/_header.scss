@@ -2,9 +2,34 @@ header {
     background: linear-gradient(#f8f8f8 60%, #d8d7dd);
 }
 
-.chair_H {
+#black_chair {
     background-image: url("../images/black_chair.png");
 }
+
+#red_chair {
+    background-image: url("../images/red.png");
+}
+
+#orange_chair {
+    background-image: url("../images/orange.png");
+}
+
+
+.chair {
+  list-style: none;
+}
+
+.chair li {
+  display: none;
+}
+
+.chair .visible {
+  display: inline-block;
+}
+
+
+
+
 
 .header {
     height: 20em;
@@ -18,4 +43,29 @@ header {
         font-size: 1.5em;
     }
 
+}
+
+
+//slider
+
+#left {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#right {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+#lt, #gt {
+
+    cursor: point;
+    font-size: 15%;
+    align-items: center;
 }
