@@ -1,9 +1,17 @@
 
 @font-face {
     font-family: "raleway";
-    src: url("../fonts/Raleway-Regular.woff") format("woff"),
-         url("../fonts/Raleway-Regular.woff2") format("woff2");
+    src: url("../fonts/raleway-regular-webfont.woff") format("woff"),
+         url("../fonts/raleway-regular-webfont.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: "raleway";
+  src: url("../fonts/raleway-bold-webfont.woff") format("woff"),
+       url("../fonts/raleway-bold-webfont.woff2") format("woff2");
+  font-weight: bold;
+}
+
 
 body {
   font-family: "raleway";
@@ -22,19 +30,10 @@ body {
 }
 
 
-
-
 span {
     color: green;
 
 }
-
-li {
-    word-spacing: 2px; //rozdziela tylko o !?
-    margin: 10px;
-
-}
-
 
 
 .section_2T {
@@ -50,19 +49,4 @@ li {
     height: 4%;
     background: green;
     color:green;
-}
-
-#logo1 {
-    color:white;
-    display: flex;
-    float: left;
-    margin: 10px;
-
-}
-
-#menu {
-    color:white;
-    display: flex;
-    float:right;
-
 }
