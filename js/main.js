@@ -5,27 +5,46 @@
 
 // --- menu li ---
 
-var nav = document.querySelectorAll('#menu');
+var nav = document.querySelectorAll('#pod_menu');
 
 
 for(var i = 0; i < nav.length; i++) {
   nav[i].addEventListener('mouseover', function() {
-    var li = this.querySelector('li');
+    var ul = this.querySelector('ul');
 
-    if(li !== null) {
-      li.style.display = 'block';
+    if(ul !== null) {
+      ul.style.display = 'block';
     }
   })
 }
 
 for(var i = 0; i <nav.length; i++) {
   nav[i].addEventListener('mouseout', function () {
-    var li = this.querySelector('li');
+    var ul = this.querySelector('ul');
 
-    if(li !== null) {
-      li.style.display = "none";
+    if(ul !== null) {
+      ul.style.display = "none";
     }
   })
 }
 
  });
+
+
+// --- section_1 hide text ---
+
+var images = document.getElementsByClassName('section_1');
+
+for(var i = 0; i < images.length; i++) {
+  images[i].addEventListener('mouseover', function () {
+    var text = this.querySelector('.text_hiden'); // --?-- dlaczego nie dziala z querySelectorAll dla wszystkich .text_hiden --!--
+    text.style.display = 'none';
+  })
+}
+
+for(var i = 0; i<images.length; i++) {
+  images[i].addEventListener('mouseout', function () {
+    var text = this.querySelector('.text_hiden');
+    text.style.display= 'block';
+  })
+}
